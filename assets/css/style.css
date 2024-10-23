@@ -1,0 +1,151 @@
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --fs-normal: 0.5rem;
+  --fs-title: 1rem;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --fw-semi-bold: 700;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../../assets/fonts/Inter-VariableFont_slnt_wght.ttf) format("truetype");
+  font-weight: 100 700;
+}
+
+/* resets start*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* resets end*/
+
+body {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-size: var(--fs-normal);
+  background-color: var(--grey-900);
+  color: var(--white);
+  text-align: center;
+}
+
+main {
+  background-color: var(--grey-800);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 14.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  max-height: 3.125rem;
+  margin: 1.563rem auto 1.25rem auto;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+}
+
+.location {
+  margin-top: 0.375rem;
+  font-weight: var(--fw-semi-bold);
+  color: var(--green);
+  font-size: var(--fs-normal);
+}
+
+.description{
+  margin-top: 0.75rem;
+  font-size: var(--fs-normal);
+}
+
+.platform--list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.563rem;
+  max-width: 11.5rem;
+  width: 100%;
+}
+
+.platform--list li {
+  background-color: var(--grey-700);
+  border-radius: 4px;
+  line-height: 1.75rem;
+}
+
+.platform--list li a {
+  font-weight: var(--fw-semi-bold);
+  color: var(--white);
+  display: block;
+  text-decoration: none;
+}
+
+.platform--list li a:hover,a:focus-visible {
+  background-color: var(--green);
+  color: var(--grey-900);
+}
