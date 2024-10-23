@@ -15,6 +15,7 @@
   font-family: Inter;
   src: url(../../assets/fonts/Inter-VariableFont_slnt_wght.ttf) format("truetype");
   font-weight: 100 700;
+  font-display: swap;
 }
 
 /* resets start*/
